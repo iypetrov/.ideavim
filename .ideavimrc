@@ -1,0 +1,39 @@
+let mapleader = " "
+
+set scrolloff=8
+set showmode
+set showcmd
+set visualbell
+set incsearch
+set hlsearch
+set surround
+set clipboard+=unnamed
+
+map <C-o> <Action>(Back)
+
+nmap rn <Action>(RenameElement)
+nmap rm <Action>(ExtractMethod)
+nmap rv <Action>(IntroduceVariable)
+nmap rf <Action>(IntroduceField)
+nmap rs <Action>(ChangeSignature)
+nmap rr <Action>(Refactorings.QuickListPopupAction)
+
+nmap gd <Action>(GotoDeclaration)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gu <Action>(ShowUsages)
+nmap gt <Action>(GotoTest)
+
+nmap <leader>ff <action>(GotoFile)
+nmap <leader>fr <action>(RecentFiles)
+nmap <leader>fp <action>(FindInPath)
+
+nmap <leader><leader> <Action>(ShowBookmarks)
+nmap <leader>a <Action>(ToggleBookmark)
+nmap <C-p> <Action>(GotoPreviousBookmark)
+
+nmap <leader>s [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
